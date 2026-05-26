@@ -1,0 +1,25 @@
+[project]
+name = "cognitive-coding-engagement-analysis"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "moviepy>=2.2.1",
+    "pyannote-audio>=4.0.4",
+    "soundfile>=0.13.1",
+    "transformers>=5.2.0",
+    "torch>=2.8.0",
+    "torchaudio>=2.8.0",
+    "librosa>=0.11.0",
+    "panns-inference>=0.1.1",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu126" }
+torchaudio = { index = "pytorch-cu126" }
